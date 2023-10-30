@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: var(--principal);
+    font-family: 'Sora', sans-serif;
 }
 
 header {
@@ -19,8 +19,8 @@ header {
   }
   
   a {
-    color: var(--branco);
-    text-decoration: none;
+    color: var(--branco)!important;
+    text-decoration: none!important;
     font-weight: bolder;
     font-size: 20px
   }
@@ -32,7 +32,7 @@ header {
   }
   
   .header-menu a:hover {
-    color: var(--secundaria);
+    color: var(--secundaria)!important;
   }
   
   .header-logo {
@@ -160,7 +160,7 @@ header {
     content: "";
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #f7c6d1), url("../assets/bg_home.jpg");
+    background-image: url("../assets/bg_home.jpg");
     left: 0;
     top: 0;
     width: 100%;
@@ -171,3 +171,33 @@ header {
     background-repeat: no-repeat;
     opacity: 1;
   }
+
+/* DESTAQUES*/
+.content_destaques {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secundaria);
+}
+
+.title_destaques {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.title_destaques > h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.carousel-item > img {
+    height: 280px!important;
+}
+
+@media (min-width: 769px) {
+    .carousel-item > img {
+        height: 400px!important;
+    }
+}
